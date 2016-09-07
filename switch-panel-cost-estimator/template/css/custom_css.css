@@ -1,0 +1,7 @@
+.item-switch { text-align:center; /*padding-top:25px;*/ margin-left:10px; font-size:11px;}
+.item_1 { 
+    /*position: absolute;*/ 
+    top: 50px; 
+    left: 50px; 
+}
+.item-switch img{vertical-align: text-bottom;}
