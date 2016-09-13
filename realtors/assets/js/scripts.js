@@ -2,9 +2,9 @@
     $(function(){
         $('#btn-search').click(function(e){
             e.preventDefault();
-            var fields = $('#search-realtors').find('input[type=text], input[type=email]').length;
+            var fields = $('#search-realtors').find('input[type=text], input[type=email], select').length;
             var field_values = 0;
-            $('#search-realtors').find('input[type=text], input[type=email]').each(function(){
+            $('#search-realtors').find('input[type=text], input[type=email], select').each(function(){
                 if($(this).val() == ''){
                     field_values++;
                 }

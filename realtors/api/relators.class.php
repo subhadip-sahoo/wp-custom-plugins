@@ -22,7 +22,7 @@ class Realtors {
             if(empty($value))
                 continue;
             
-            $this->query_str .= $key . '='.$value.'&'; 
+            $this->query_str .= $key . '='.urlencode($value).'&'; 
         }
         $this->query_str = rtrim($this->query_str, '&');
         return $this->query_str;
@@ -41,5 +41,10 @@ class Realtors {
             require_once REALTORS_TEAMPLATE_DIR . '/no-results.php';
         else
             require_once REALTORS_TEAMPLATE_DIR . '/search-results.php';
+    }
+    
+    public function get_langs(){
+        $response = file_get_contents($this->api_url . '/langs');
+        return json_decode($response);
     }
 }

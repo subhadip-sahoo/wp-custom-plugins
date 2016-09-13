@@ -4,6 +4,7 @@ function handle_form_view($args){
     extract($args);
     $relators = new Realtors($_REQUEST);
     $req = $relators->get_request();
+    $langs = $relators->get_langs();
     require_once REALTORS_TEAMPLATE_DIR . '/search-form.php';
 }
 

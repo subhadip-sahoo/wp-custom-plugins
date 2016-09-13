@@ -3,9 +3,10 @@
     <div class="list-group">
         <?php foreach($results as $result) : ?>
         <a href="#" class="list-group-item realtors-list-item">
-            <h4 class="list-group-item-heading">Name : <?php echo $result->first_name . ' ' . $result->last_name; ?></h4>
-            <p class="list-group-item-text">Email : <?php echo $result->email; ?></p>
-            <p class="list-group-item-text">Zipcode : <?php echo $result->zipcode; ?></p>
+            <h4 class="list-group-item-heading">Name : <?php echo $result->full_name; ?></h4>
+            <p class="list-group-item-text">Member Number : <?php echo $result->member_number; ?></p>
+            <p class="list-group-item-text">MLS ID : <?php echo $result->mls_id; ?></p>
+            <p class="list-group-item-text">Bill Type Code : <?php echo $result->bill_type_code; ?></p>
         </a>
         <?php endforeach; ?>
     </div>
